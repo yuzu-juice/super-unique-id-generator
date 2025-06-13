@@ -1,19 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Copy, RefreshCw } from "lucide-react";
 
 interface IdType {
   id: string;
   name: string;
-  description: string;
   generator: () => string;
 }
 
@@ -34,25 +27,9 @@ export function IdCard({
 }: IdCardProps) {
   return (
     <Card className="relative">
-      <CardHeader className="pb-3">
+      <CardHeader>
         <div className="flex items-center justify-between">
-          <div>
-            <CardTitle className="text-lg">{type.name}</CardTitle>
-            <CardDescription className="text-sm mt-1">
-              {type.description}
-            </CardDescription>
-          </div>
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() => onRegenerate(type)}
-            disabled={isGenerating}
-            className="shrink-0"
-          >
-            <RefreshCw
-              className={`h-4 w-4 ${isGenerating ? "animate-spin" : ""}`}
-            />
-          </Button>
+          <CardTitle className="text-lg">{type.name}</CardTitle>
         </div>
       </CardHeader>
 
