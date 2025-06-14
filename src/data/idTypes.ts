@@ -1,3 +1,7 @@
+import { nanoid } from "nanoid";
+import cuid from "cuid";
+import { ulid } from "ulid";
+
 export interface IdType {
   id: string;
   name: string;
@@ -13,26 +17,16 @@ export const idTypes: IdType[] = [
   {
     id: "nanoid",
     name: "Nano ID",
-    generator: () => "V1StGXR8_Z5jdHi6B-myT",
+    generator: () => nanoid(),
   },
   {
     id: "cuid",
     name: "CUID",
-    generator: () => "cjld2cjxh0000qzrmn831i7rn",
+    generator: () => cuid(),
   },
   {
     id: "ulid",
     name: "ULID",
-    generator: () => "01ARZ3NDEKTSV4RRFFQ69G5FAV",
-  },
-  {
-    id: "shortid",
-    name: "Short ID",
-    generator: () => "S1x8j2d9k",
-  },
-  {
-    id: "objectid",
-    name: "Object ID",
-    generator: () => "507f1f77bcf86cd799439011",
+    generator: () => ulid(),
   },
 ];

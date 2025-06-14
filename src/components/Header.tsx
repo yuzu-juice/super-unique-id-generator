@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="text-center py-6">
       <div className="flex items-center justify-center gap-4">
-        <h1 className="text-2xl md:text-3xl font-bold">
+        <h1 className="text-xl md:text-2xl font-bold">
           Super Unique ID Generator
         </h1>
         <Button variant="outline" size="sm" asChild>
