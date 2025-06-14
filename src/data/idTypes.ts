@@ -8,7 +8,7 @@ export const idTypes: IdType[] = [
   {
     id: "uuid",
     name: "UUID v4",
-    generator: () => "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    generator: () => crypto.randomUUID(),
   },
   {
     id: "nanoid",
